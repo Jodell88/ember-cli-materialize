@@ -2,7 +2,8 @@
 
 <select onchange={{action (mut value) value="target.value"}}
         class="{{if validate 'validate'}} {{if errors 'invalid' 'valid'}}"
-        disabled={{if disabled "true"}}>
+        disabled={{if disabled "true"}}
+        multiple={{if multiple "true"}}>
   {{#if prompt}}
     <option value="" disabled selected={{unless value "true"}}>{{prompt}}</option>
   {{/if}}
